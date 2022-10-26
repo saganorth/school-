@@ -1,6 +1,6 @@
 body {
     padding: 25px;
-    background-color: pink;
+    background-color: white;
     color: black;
     font-size: 25px;
   }
@@ -9,4 +9,31 @@ body {
     background-color: black;
     color: white;
   }
+
+  #mvg{
+    color:green; 
+    font-size: 25px;
+  }
+
+  #g{
+    color: orange; 
+    font-size: 25px;
+  }
+  #u {
+    color: red; 
+    font-size: 25px; 
+  }
+  #resut {
+    position:right; 
+    font-size: 25px; 
+    
+  }
+
+  .container{
+    border-style: solid;
+  border-width: medium;
+  padding: 25px;
+  background-color: lightgrey;
+  }
+
   

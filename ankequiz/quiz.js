@@ -20,7 +20,7 @@ let myQuestions = [
       answer: true
     },
     {
-      question: "ornacia was the frist eliminated queen on sesaon 6 ",
+      question: "ornacia was the first eliminated queen on sesaon 6 ",
       answer: false
     },
     {
@@ -45,15 +45,17 @@ let myQuestions = [
   var points = 0;
   let question;
   let maxPoints = myQuestions.length;
-  function showBottons() {
-    document.getElementById("answerT").style.display = "";
-    document.getElementById("answerF").style.display = "";
-  }
+
   
+  function showButtons(){
+	document.getElementById("answerT").style.display="";
+	document.getElementById("answerF").style.display="";
+    document.getElementById("result").style.display=""; 
+}
   function randomQuestion() {
-    showBottons();
     start.style.display = "none";
-  
+  showButtons();
+ 
     let countQuestion = (document.getElementById("count").innerHTML =
       "Question " + ++count + " / 10");
   
@@ -74,7 +76,7 @@ let myQuestions = [
     } else {
       document.getElementById("answerT").style.display = "none";
       document.getElementById("answerF").style.display = "none";
-      document.getElementById("result").style.display = "";
+      document.getElementById("result").style.display=""; 
     }
   }
   
@@ -94,10 +96,12 @@ let myQuestions = [
     }
     randomQuestion();
   }
+
   function showResult() {
+    
     if (points > maxPoints * 0.75) {
       document.getElementById("mvg").style.display = "";
-    } else if ((points) => maxPoints * 0.5) {
+    } else if ( points >= maxPoints * 0.5) {
       document.getElementById("g").style.display = "";
     } else if (points < maxPoints * 0.5) {
       document.getElementById("u").style.display = "";
