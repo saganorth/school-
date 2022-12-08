@@ -1,30 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Static Template</title>
+  <link rel="stylesheet" href="quiz.css">
+<header>
+    <h1> AnkeQuiz om Rupaul's Drag Race </h1>
     
-  </head>
-  <body>
-    <h1 id="rubrik"> Anke quiz</h1>
-
-    <button id="changeBG">Change background</button>
-
-    <p>Heter månen luna på latin ?</p>
-    <label for="true">sant</label>
-    <input type="radio" name="true" value="true" id="true" />
-    <label for="java">Java utveckling</label>
-    <input type="radio" name="programme" value="Java utveckling" id="java" />
-
-
-
-    <label for="gd">Grafisk design</label>
-    <input type="radio" name="programme" value="Grafisk design" id="gd" />
-    <label for="bygg">Bygg</label>
-    <input type="radio" name="programme" value="Bygg" id="bygg" />
-    <button id = "happy"> happy </button>
-    <script scr="quiz.js"></script>
+    <button onclick="randomQuestion()" id="start">START</button>
+    </header>
+    
+    
+    <div class="container">
+    <div id="questions">
+      <div id="count"></div>
+    
+      <div id="quest"> </div>
+      <button onclick="answer(true)" id="answerT" style="display:none;"> True</button>
+      <button onclick="answer(false)" id="answerF" style="display:none;" > False</button>
+      <button onclick="showResult()" id= "result" style="display:none;"> Result</button>
+    </div>
+    
+    <div id="mvg" style="display: none;">du fick mycket väl godkänt</div>
+        <div id="g" style="display: none;">du fick godkänt</div>
+        <div id="u" style="display: none;">du fick underkänt.</div>
+        <button onclick="restart()" style="display: none;" id="reset">
+          Försök igen?
+        </button>
+        <ul id= "grade"></ul>
+      </div>
+      <button onclick="myFunction()">dark mode</button>
+    <script src="quiz.js"></script>
   </body>
 </html>
