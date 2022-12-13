@@ -1,12 +1,11 @@
-* {
-  background: #EAC9F1;
+/* helpers/grid.css */
+.grid {
+  inline-size: 90%;
+  margin-inline: auto;
+  max-inline-size: 48em;
 }
 
-h1,
-h2 {
-  color: white;
-}
-
+/* helpers/sticky.css */
 .sticky {
   position: -webkit-sticky;
   position: sticky;
@@ -20,7 +19,8 @@ h2 {
 .header {
   background-color: #77537d;
   padding-block: 1em;
-  color: #77537d;
+  z-index: 10;
+  font-family: "MontrealSerial", sans-serif;
 }
 
 .header::after {
@@ -52,37 +52,59 @@ h2 {
 }
 
 .navigation__link {
-  color: inherit;
+  color: white;
   display: block;
   padding-inline: 1em;
   text-decoration: none;
 }
 
 .navigation__link--is-active {
-  background-color: #EAC9F1;
+  background-color: #000;
   border-radius: 999em;
   color: #fff;
 }
 
+.icon {
+  color: #f2f2f2;
+}
+
+h2 {
+  color: black;
+}
+
+body {
+  background-color: #EAC9F1;
+}
+
 main {
-  border: 2px solid #EAC9F1;
+  border: 2px transparent #eac9f1;
   padding: 6px;
 }
 main h2 {
   font-size: 28px;
+  font-family: "Halimun", sans-serif;
+}
+main h3 {
+  font-size: 24x;
+  font-family: "MontrealSerial", sans-serif;
 }
 main p {
   font-size: 24x;
-  color: white;
+  font-family: "MontrealSerial", sans-serif;
+  color: black;
 }
-
-.column1 {
+main label {
+  font-family: "MontrealSerial", sans-serif;
+}
+main .column1 {
   background-color: #cfa9D6;
   padding: 60px 60px;
 }
 
 .slideshow-container {
+  display: center;
   max-width: 100vh;
+  max-height: 100vh;
   position: relative;
   margin: auto;
 }
@@ -125,7 +147,7 @@ main p {
 
 /* Caption text */
 .text {
-  color: #f2f2f2;
+  color: black;
   font-size: 15px;
   padding: 8px 12px;
   position: absolute;
@@ -133,6 +155,7 @@ main p {
   width: 100%;
   text-align: center;
   background-color: transparent;
+  font-family: "MontrealSerial", sans-serif;
 }
 
 .active, .text:hover {
@@ -189,9 +212,37 @@ main p {
     opacity: 1;
   }
 }
-footer {
-  color: #77537d;
+.frame {
+  display: flex;
+  flex-direction: flex-start;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: nowrap;
+  padding: 30px 20px;
+  background-color: #cfa9D6;
 }
-footer p {
+
+.imgHead {
+  display: flex;
+  flex-direction: flex-start;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+
+.footer {
+  background-color: #77537d;
+  color: white;
+}
+.footer p {
+  color: white;
+}
+.footer .columns {
+  background-color: #77537d;
+}
+.footer .column {
+  background-color: #77537d;
+}
+.footer .icon-text {
   color: white;
 }/*# sourceMappingURL=style.css.map */
